@@ -9,4 +9,4 @@ fi
 
 cd /app
 
-python tm_analyze.py ${ENV_TM_URL} ${ENV_TM_REPOSITORY_ID} ${ENV_TM_SOURCE}
+python tm_analyze.py ${1} ${2} ${3}
