@@ -1,0 +1,13 @@
+name: TMScanner Scan
+description: >
+  Scan your sol files
+branding:
+  icon: check
+  color: green
+runs:
+  using: docker
+  image: Dockerfile
+inputs:
+  args:
+    description: Additional arguments to the TMScanner scanner
+    required: false
