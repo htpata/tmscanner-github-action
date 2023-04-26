@@ -12,13 +12,13 @@ ARG TM_SOURCE
 WORKDIR /app
 
 # prepare client
-COPY requirements.txt .
-COPY tm_analyze.py .
-COPY ${TM_SOURCE} .
+COPY requirements.txt /app/requirements.txt
+COPY tm_analyze.py /app/tm_analyze.py
+COPY ${TM_SOURCE} /app/${TM_SOURCE}
 
 RUN pip install -r requirements.txt
 
-CMD python tm_analyze.py ${TM_URL} ${TM_REPOSITORY_ID} ${TM_SOURCE}
+CMD python /app/tm_analyze.py ${TM_URL} ${TM_REPOSITORY_ID} /app/${TM_SOURCE}
 
 # Prepare entrypoint
 # COPY entrypoint.sh /entrypoint.sh
