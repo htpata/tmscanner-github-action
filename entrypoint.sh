@@ -7,4 +7,6 @@ if [[ -z "${TM_TOKEN}" ]]; then
   exit 1
 fi
 
+cd /app
+
 python tm_analyze.py ${TM_URL} ${TM_REPOSITORY_ID} ${TM_SOURCE}
