@@ -4,7 +4,17 @@ ARG TM_URL
 ARG TM_REPOSITORY_ID
 ARG TM_SOURCE
 
-# Using ARG to set ENV
+RUN echo "*************************dockerfile1"
+RUN echo ${TM_URL}
+RUN echo ${TM_REPOSITORY_ID}
+RUN echo ${TM_SOURCE}
+RUN echo "*************************dockerfile2"
+RUN echo $TM_URL
+RUN echo $TM_REPOSITORY_ID
+RUN echo $TM_SOURCE
+RUN echo "*************************dockerfile3"
+
+# Using ARG to set ENV  TM_REPOSITORY_ID
 # ENV ENV_TM_URL=$TM_URL
 # ENV ENV_TM_REPOSITORY_ID=$TM_REPOSITORY_ID
 # ENV ENV_TM_SOURCE=$TM_SOURCE
