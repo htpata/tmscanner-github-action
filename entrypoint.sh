@@ -13,8 +13,11 @@ if [[ -z "${TM_TOKEN}" ]]; then
   exit 1
 fi
 
-cd /app
+echo ${GITHUB_WORKSPACE}
+cd ${GITHUB_WORKSPACE}
+echo "$(ls -la)"
 
+cd /app
 echo "$(ls -la)"
 
 python tm_analyze.py ${1} ${2} ${3}
