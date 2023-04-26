@@ -14,7 +14,7 @@ WORKDIR /app
 # prepare client
 COPY requirements.txt .
 COPY tm_analyze.py .
-COPY $TM_SOURCE .
+COPY ${TM_SOURCE} .
 
 RUN pip install -r requirements.txt
 
