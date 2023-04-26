@@ -15,4 +15,6 @@ fi
 
 cd /app
 
+echo "$(ls -la)"
+
 python tm_analyze.py ${1} ${2} ${3}
