@@ -8,6 +8,12 @@ runs:
   using: docker
   image: Dockerfile
 inputs:
-  args:
-    description: Additional arguments to the TMScanner scanner
-    required: false
+  TM_URL:
+    description: url of TMScanner scanner
+    required: true
+  TM_REPOSITORY_ID:
+    description: TM_REPOSITORY_ID
+    required: true
+  TM_SOURCE:
+    description: TM_SOURCE
+    required: true

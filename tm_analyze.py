@@ -15,7 +15,7 @@ app = typer.Typer()
 
 @app.command()
 def run_anaylisis(test_machine_api_url: str, repository_id: int, source: str):
-    print(f"TM action: creating snapshot at repository id: [{repository_id}]")
+    print(f"TM action: run_anaylisis test_machine_api_url {test_machine_api_url}, repository id [{repository_id}], source {source}")
 
     TM_TOKEN = os.getenv("TM_TOKEN")
 

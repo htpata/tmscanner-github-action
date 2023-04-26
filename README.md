@@ -31,16 +31,18 @@ jobs:
         fetch-depth: 0
     - name: TMScanner Scan
       uses: htpata/tmscanner-github-action@main
-      env:
-        # All parameters are required
+      with:
+        # All arguments are required
         # TM_URL: URL of the TMScanner system assigned to you by the TMScanner team (in this example: http://129.148.26.53:6862)
         # TM_REPOSITORY_ID: Use an already existing repository id in the TMScanner system (in this example: 120)
-        # TM_SOURCE: The .sol file (or .zip with many .sol files inside) that you want to analyze (in this example: hello.sol)
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # TM_SOURCE: The .sol file (or .zip with many .sol files inside) that you want to analyze (in this example: hello.sol)        
         TM_URL: http://129.148.26.53:6862
-        TM_TOKEN: ${{ secrets.TM_TOKEN }}
         TM_REPOSITORY_ID: 120
         TM_SOURCE: hello.sol
+      env:
+        # All env variables are required
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TM_TOKEN: ${{ secrets.TM_TOKEN }}
 ```
 
 ### Secrets
