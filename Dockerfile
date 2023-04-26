@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 # Prepare entrypoint
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh", ${TM_URL}, ${TM_REPOSITORY_ID}, ${TM_SOURCE}]
+ENTRYPOINT ["/entrypoint.sh", "${TM_URL}", "${TM_REPOSITORY_ID}", "${TM_SOURCE}"]
