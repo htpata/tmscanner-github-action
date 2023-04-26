@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "inside entrypoint.sh 1"
+echo ${1}
+echo ${2}
+echo ${3}
+echo "inside entrypoint.sh 2"
+
 set -e
 
 if [[ -z "${TM_TOKEN}" ]]; then
